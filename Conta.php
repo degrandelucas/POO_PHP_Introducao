@@ -1,15 +1,26 @@
 <?php
 class Conta
 {
-    private int $saldo;
+    private int $saldo = 0;
     private string $nomeTitular;
     private string $numeroConta;
 
-    public function setSaldo(int $saldo): void
+    public function deposito(int $valor): void
     {
-        $this->saldo = $saldo;
+        if ($valor < 0) {
+            echo "Valor inválido\n";
+        } else {
+            $this->saldo += $valor;
+        }
     }
-
+    public function saque(int $valor): void
+    {
+        if ($valor > $this->saldo) {
+            echo "Saldo insuficiente\n";
+        } else {
+            $this->saldo -= $valor;
+        }
+    }
     public function getSaldo(): int
     {
         return $this->saldo;
