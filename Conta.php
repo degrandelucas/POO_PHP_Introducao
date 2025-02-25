@@ -1,7 +1,4 @@
 <?php
-
-namespace Conta;
-
 class Conta
 {
     private int $saldoEmCentavos;
