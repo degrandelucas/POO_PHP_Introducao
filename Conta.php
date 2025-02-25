@@ -1,18 +1,18 @@
 <?php
 class Conta
 {
-    private int $saldoEmCentavos;
+    private int $saldo;
     private string $nomeTitular;
     private string $numeroConta;
 
-    public function setSaldoEmCentavos(int $saldoEmCentavos): void
+    public function setSaldo(int $saldo): void
     {
-        $this->saldoEmCentavos = $saldoEmCentavos;
+        $this->saldo = $saldo;
     }
 
-    public function getSaldoEmCentavos(): int
+    public function getSaldo(): int
     {
-        return $this->saldoEmCentavos;
+        return $this->saldo;
     }
 
     public function setNomeTitular(string $nomeTitular): void
@@ -25,7 +25,7 @@ class Conta
         return $this->nomeTitular;
     }
 
-    public function setNumeroConta(int $numeroConta): void
+    public function setNumeroConta(string $numeroConta): void
     {
         $this->numeroConta = $numeroConta;
     }
