@@ -15,8 +15,8 @@ class Conta
     }
     public function saque(int $valor): void
     {
-        if ($valor > $this->saldo) {
-            echo "Saldo insuficiente\n";
+        if ($valor <= 0 || $valor > $this->saldo) {
+            echo "Saldo insuficiente ou valor inserido incorretamente para saque\n";
         } else {
             $this->saldo -= $valor;
         }
